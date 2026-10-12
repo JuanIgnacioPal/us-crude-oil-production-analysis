@@ -1,0 +1,43 @@
+﻿series_id,area_name,area_type,padd,is_component
+MCRFPUS2,United States,National,Not applicable,0
+MCRFPP12,East Coast (PADD 1),PADD,PADD 1,0
+MCRFPFL2,Florida,State,PADD 1,1
+MCRFPNY2,New York,State,PADD 1,1
+MCRFPPA2,Pennsylvania,State,PADD 1,1
+MCRFPVA2,Virginia,State,PADD 1,1
+MCRFPWV2,West Virginia,State,PADD 1,1
+MCRFPP22,Midwest (PADD 2),PADD,PADD 2,0
+MCRFPIL2,Illinois,State,PADD 2,1
+MCRFPIN2,Indiana,State,PADD 2,1
+MCRFPKS2,Kansas,State,PADD 2,1
+MCRFPKY2,Kentucky,State,PADD 2,1
+MCRFP_SMI_2,Michigan,State,PADD 2,1
+MCRFPMO2,Missouri,State,PADD 2,1
+MCRFPNE2,Nebraska,State,PADD 2,1
+MCRFPND2,North Dakota,State,PADD 2,1
+MCRFPOH2,Ohio,State,PADD 2,1
+MCRFPOK2,Oklahoma,State,PADD 2,1
+MCRFPSD2,South Dakota,State,PADD 2,1
+MCRFPTN2,Tennessee,State,PADD 2,1
+MCRFPP32,Gulf Coast (PADD 3),PADD,PADD 3,0
+MCRFPAL2,Alabama,State,PADD 3,1
+MCRFPAR2,Arkansas,State,PADD 3,1
+MCRFPLA2,Louisiana,State,PADD 3,1
+MCRFPMS2,Mississippi,State,PADD 3,1
+MCRFPNM2,New Mexico,State,PADD 3,1
+MCRFPTX2,Texas,State,PADD 3,1
+MCRFP3FM2,Federal Offshore (PADD 3),Federal offshore,PADD 3,1
+MCRFPP42,Rocky Mountain (PADD 4),PADD,PADD 4,0
+MCRFPCO2,Colorado,State,PADD 4,1
+M_EPC0_FPF_SID_MBBLD,Idaho,State,PADD 4,1
+MCRFPMT2,Montana,State,PADD 4,1
+MCRFPUT2,Utah,State,PADD 4,1
+MCRFPWY2,Wyoming,State,PADD 4,1
+MCRFPP52,West Coast (PADD 5),PADD,PADD 5,0
+MCRFPAK2,Alaska,State,PADD 5,1
+MCRFPAKS2,South Alaska,State subdivision,PADD 5,0
+MANFPAK2,North Slope,State subdivision,PADD 5,0
+MCRFPAZ2,Arizona,State,PADD 5,1
+MCRFPCA2,California,State,PADD 5,1
+MCRFPNV2,Nevada,State,PADD 5,1
+MCRFP5F2,Federal Offshore (PADD 5),Federal offshore,PADD 5,1
