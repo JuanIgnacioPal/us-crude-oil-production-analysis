@@ -70,6 +70,8 @@ A live Excel refresh was not independently executed.
 | production_monthly.csv | month, series_id, production_kbpd | 8,358 |
 | geography_lookup.csv | series_id, area_name, area_type, padd, is_component | 42 |
 
+---
+
 CSV validation status: Passed on 2026-10-13.
 Actual delimiter: Comma.
 Encoding: UTF-8 with BOM.
