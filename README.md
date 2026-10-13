@@ -189,10 +189,12 @@ us-crude-oil-production-analysis/
 │   │   └── README.md
 │   └── processed/
 │       ├── us_crude_oil_preparation.xlsx
-        ├── geography_lookup.csv
-        ├── production_monthly.csv
+│       ├── geography_lookup.csv
+│       ├── production_monthly.csv
 │       └── README.md
 ├── docs/
+│   ├──data_dictionary.md
+│   ├──data_preparation.md
 │   └── README.md
 ├── sources/
 │   └── sources.md
