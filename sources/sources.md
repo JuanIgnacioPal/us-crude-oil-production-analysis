@@ -9,9 +9,9 @@ materials consulted throughout the project.
 |---|---|
 | Institution | U.S. Energy Information Administration (EIA) |
 | Dataset | Crude Oil Production |
-| Planned frequency | Monthly |
-| Coverage | United States; geographic detail pending validation |
-| Status | Source selected; working file not yet incorporated into the repository |
+| frequency | Monthly |
+| Coverage | United States: national total, five PADDs, 32 states, two federal offshore areas, and two Alaska subdivisions |
+| Status | Original workbook preserved; preparation workbook and CSV exports validated |
 
 🔗 [Crude Oil Production Table](https://www.eia.gov/dnav/pet/pet_crd_crpdn_adc_mbblpd_m.htm)
 
@@ -19,8 +19,7 @@ materials consulted throughout the project.
 
 ## 🧾 Acquisition Record
 
-This section will be completed when the original file is
-incorporated into the repository.
+The acquisition details and inspected source coverage are recorded below.
 
 | Field | Value |
 |---|---|
