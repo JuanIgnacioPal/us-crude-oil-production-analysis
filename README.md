@@ -155,8 +155,8 @@ Phase 7 will consolidate the supporting evidence.
 
 ## 📦 Planned Deliverables
 
-- [ ] Original and prepared datasets.
-- [ ] Data dictionary and transformation log.
+- [x] Original and prepared datasets.
+- [x] Data dictionary and transformation log.
 - [ ] SQL analysis and validation scripts.
 - [ ] KPI catalog and calculation rules.
 - [ ] Power BI data model and dashboard.
