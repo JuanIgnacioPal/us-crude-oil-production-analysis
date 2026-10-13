@@ -70,15 +70,6 @@ A live Excel refresh was not independently executed.
 | production_monthly.csv | month, series_id, production_kbpd | 8,358 |
 | geography_lookup.csv | series_id, area_name, area_type, padd, is_component | 42 |
 
-Export procedure:
-
-1. Copy the relevant table into a separate workbook as values.
-2. Format production dates as YYYY-MM-DD.
-3. Export production numbers without thousands separators.
-4. Save as CSV UTF-8.
-5. Inspect the delimiter and date representation in a text editor.
-6. Validate the CSV contents against the preparation workbook.
-
 CSV validation status: Passed on 2026-10-13.
 Actual delimiter: Comma.
 Encoding: UTF-8 with BOM.
