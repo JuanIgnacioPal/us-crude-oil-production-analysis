@@ -79,23 +79,16 @@ Export procedure:
 5. Inspect the delimiter and date representation in a text editor.
 6. Validate the CSV contents against the preparation workbook.
 
-CSV validation status: Pending.
-Actual delimiter: Pending inspection.
-
-CSV exports are snapshots. Regenerate and validate them after any
-approved change to the preparation workbook.
-
-## 🔄 Refreshing the preparation workbook
-
-1. Keep the original source snapshot available.
-2. Open the staging query and inspect its Source step.
-3. If the local source path differs, update it to the preserved workbook.
-4. Refresh the queries and repeat the validation checks.
-5. Save the workbook and regenerate the CSV exports.
-
-A new EIA release is a separate source version.
-Record its release date and reassess coverage before replacing
-the data used in the published analysis.
+CSV validation status: Passed on 2026-10-13.
+Actual delimiter: Comma.
+Encoding: UTF-8 with BOM.
+Date representation: YYYY-MM-DD.
+- Production export: 8,358 records, matching the preparation
+  workbook and original EIA source exactly.
+- Geographic export: 42 records, matching the validated lookup.
+- Duplicate keys: 0 in both exports.
+- Missing geographic mappings: 0.
+- Empty field values: 0.
 
 ## 🔗 Related documentation
 
