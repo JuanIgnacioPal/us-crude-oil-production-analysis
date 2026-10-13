@@ -1,3 +1,4 @@
+
 # 🛢️ U.S. Crude Oil Production Analysis
 
 > 📊 A data analytics project exploring production trends, regional
@@ -187,7 +188,9 @@ us-crude-oil-production-analysis/
 │   │   ├── PET_CRD_CRPDN_ADC_MBBLPD_M.xls
 │   │   └── README.md
 │   └── processed/
-│       ├──us_crude_oil_preparation.xlsx
+│       ├── us_crude_oil_preparation.xlsx
+        ├── geography_lookup.csv
+        ├── production_monthly.csv
 │       └── README.md
 ├── docs/
 │   └── README.md
