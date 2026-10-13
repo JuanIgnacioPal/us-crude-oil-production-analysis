@@ -82,7 +82,7 @@ Explanations of the underlying causes will require additional evidence.
 - 🌐 [Petroleum & Other Liquids Data](https://www.eia.gov/petroleum/data.php)
 - 📚 [Project Source Register](https://github.com/JuanIgnacioPal/us-crude-oil-production-analysis/blob/main/sources/sources.md)
 
-An **unmodified copy of the original file** will be retained.
+An unmodified copy of the original file is preserved in data/raw/.
 The documentation will record:
 
 - Download date.
@@ -193,8 +193,8 @@ us-crude-oil-production-analysis/
 │       ├── production_monthly.csv
 │       └── README.md
 ├── docs/
-│   ├──data_dictionary.md
-│   ├──data_preparation.md
+│   ├── data_dictionary.md
+│   ├── data_preparation.md
 │   └── README.md
 ├── sources/
 │   └── sources.md
