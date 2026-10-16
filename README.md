@@ -6,7 +6,7 @@
 > production using public data from the U.S. Energy Information
 > Administration (EIA).
 
-**Status:** 🚧 In progress — Phase 2: Data acquisition and cleaning  
+**Status:** 🚧 In progress — Phase 3: SQL loading and validation 
 **Industry:** 🛢️ Oil & Gas · Crude oil production  
 **Coverage:** 🌎 United States  
 **Frequency:** 📅 Monthly  
@@ -199,6 +199,8 @@ us-crude-oil-production-analysis/
 ├── sources/
 │   └── sources.md
 └── sql/
+    ├── 01_created_schema.sql
+    ├── 02_validated_import.sql
     └── README.md
 ```
 
