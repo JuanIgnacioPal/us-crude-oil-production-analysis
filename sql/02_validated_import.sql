@@ -1,27 +1,27 @@
 -- A. Record counts.
 
 USE us_crude_oil_analysis;
-	SELECT "dim_geography" as table_name,
+	SELECT 'dim_geography' as table_name,
 		COUNT(*) AS record_count
 FROM dim_geography
 
 UNION ALL
 
-SELECT "fact_production_monthly",
+SELECT 'fact_production_monthly',
 	COUNT(*) 
 FROM fact_production_monthly;
         
 -- B. Temporal coverage, series count, and preserved zeros.
 
 SELECT 
-	MIN(month) AS fisrt_month,
+	MIN(month) AS first_month,
     MAX(month) AS last_month, 
 		COUNT(DISTINCT month) AS monthly_periods,
         COUNT(DISTINCT series_id) AS series_count,
         SUM(production_kbpd = 0) AS zero_values
 FROM fact_production_monthly;
     
--- C. Every geographic series should have 99 observations.
+-- C. Every geographic series should have 199 observations.
 -- Expected results: no rows. 
 
 SELECT g.series_id,
@@ -57,6 +57,6 @@ SELECT month,
 	   series_id, 
        production_kbpd
 FROM fact_production_monthly
-	WHERE month = "2010-01-01" 
+	WHERE month = '2010-01-01' 
 		AND
-		  series_id ="MCRFPUS2";
+		  series_id ='MCRFPUS2';
