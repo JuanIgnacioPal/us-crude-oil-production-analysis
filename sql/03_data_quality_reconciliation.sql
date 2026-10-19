@@ -17,12 +17,12 @@ SELECT month, series_id, production_kbpd
 FROM fact_production_monthly
 	WHERE month IS NULL
 		OR series_id IS NULL
-        OR TRIM(series_id) = ""
+        OR TRIM(series_id) = ''
         OR production_kbpd IS NULL
         OR production_kbpd < 0
         OR DAYOFMONTH(month) <> 1
-        OR month < "2010-01-01"
-        OR month > "2026-07-01";
+        OR month < '2010-01-01'
+        OR month > '2026-07-01';
 
 -- C. Production records without a geography match. 
 -- Expected result: no rows.
@@ -37,13 +37,13 @@ FROM fact_production_monthly AS f
 -- Expected result: no rows.
 
 WITH RECURSIVE expected_months AS 
-	(SELECT CAST("2010-01-01" AS DATE) AS month
+	(SELECT CAST('2010-01-01' AS DATE) AS month
     
     UNION ALL
     
     SELECT DATE_ADD(month, INTERVAL 1 month)
 FROM expected_months
-	WHERE month < "2026-07-01"
+	WHERE month < '2026-07-01'
     )
 
 	SELECT m.month, g.series_id, g.area_name
@@ -63,7 +63,7 @@ WITH component_totals AS
 
 -- National sum of states and federal offshore areas  
 
-	(SELECT f.month, "United States" AS comparison_area,
+	(SELECT f.month, 'United States' AS comparison_area,
 		   SUM(production_kbpd) AS component_sum_kbpd
 FROM fact_production_monthly AS f
 	INNER JOIN dim_geography AS g
@@ -84,14 +84,14 @@ FROM fact_production_monthly AS f
 	),
     published_totals AS 
 	(SELECT f.month, 
-			CASE WHEN g.area_type = "National" 
-				THEN "United States" ELSE g.padd
+			CASE WHEN g.area_type = 'National' 
+				THEN 'United States' ELSE g.padd
 					END AS comparison_area,
 			f.production_kbpd AS published_total_kbpd
 FROM fact_production_monthly AS f
 	INNER JOIN dim_geography AS g
 		ON f.series_id = g.series_id
-			WHERE g.area_type IN ("National", "PADD")
+			WHERE g.area_type IN ('National', 'PADD')
 	),
     
     differences AS 
