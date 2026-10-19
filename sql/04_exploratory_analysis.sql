@@ -1,6 +1,6 @@
 USE us_crude_oil_analysis;
 
--- A. National monthly production and changes 
+-- A. National monthly production and changes. 
 -- Expected result: 199 rows. 
 
 WITH national_history AS (
