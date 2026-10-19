@@ -196,12 +196,16 @@ us-crude-oil-production-analysis/
 ├── docs/
 │   ├── data_dictionary.md
 │   ├── data_preparation.md
+│   ├── sql_exploratory_findings.md
+│   ├── sql_quality_reconciliation.md
 │   └── README.md
 ├── sources/
 │   └── sources.md
 └── sql/
     ├── 01_created_schema.sql
     ├── 02_validated_import.sql
+    ├── 03_data_quality_reconciliation.sql
+    ├── 04_exploratory_analysis.sql
     └── README.md
 ```
 
