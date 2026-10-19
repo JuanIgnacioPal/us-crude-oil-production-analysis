@@ -10,7 +10,7 @@ WITH national_history AS (
 		   LAG(production_kbpd, 12) 
 				OVER(ORDER BY month) AS previous_year_kbpd
 FROM fact_production_monthly
-	WHERE series_id = "MCRFPUS2"
+	WHERE series_id = 'MCRFPUS2'
     )
 
 SELECT month, production_kbpd,
