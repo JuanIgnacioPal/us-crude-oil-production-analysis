@@ -48,8 +48,4 @@ Differences below are **component sum − published total**, in **thousand barre
 - A–D: no rows returned, as reported by the project author. E: screenshot reviewed; all summary figures independently reproduced from the [production CSV](../data/processed/production_monthly.csv) and [geography CSV](../data/processed/geography_lookup.csv).
 - MySQL version: 9.7.1, as recorded in Block A. No retrospective numerical tolerance was applied.
 
-</details>
-
----
-
-**Next → Block C: exploratory production analysis.**
+</details
