@@ -157,7 +157,7 @@ Phase 7 will consolidate the supporting evidence.
 
 - [x] Original and prepared datasets.
 - [x] Data dictionary and transformation log.
-- [ ] SQL analysis and validation scripts.
+- [x] SQL analysis and validation scripts.
 - [ ] KPI catalog and calculation rules.
 - [ ] Power BI data model and dashboard.
 - [ ] Data quality audit.
