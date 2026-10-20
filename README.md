@@ -198,6 +198,7 @@ us-crude-oil-production-analysis/
 │   ├── data_preparation.md
 │   ├── sql_exploratory_findings.md
 │   ├── sql_quality_reconciliation.md
+│   ├── sql_import_validation.md
 │   └── README.md
 ├── sources/
 │   └── sources.md
