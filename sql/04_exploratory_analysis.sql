@@ -17,12 +17,12 @@ SELECT month, production_kbpd,
 	   production_kbpd - previous_month_kbpd AS mom_change_kbpd,
        ROUND( 100.0 * (production_kbpd - previous_month_kbpd)
 			 / NULLIF(previous_month_kbpd, 0), 2)
-				AS mom_change_ptc,
+				AS mom_change_pct,
                 
 	   production_kbpd - previous_year_kbpd AS yoy_change_kbpd,
 	   ROUND( 100.0 * (production_kbpd - previous_year_kbpd)
 			 / NULLIF(previous_year_kbpd, 0), 2)
-				AS yoy_change_ptc
+				AS yoy_change_pct
 FROM national_history
 	ORDER BY month;
     
@@ -50,7 +50,7 @@ FROM fact_production_monthly AS f
            g.padd,
            f.production_kbpd,
            ROUND(100.0 * f.production_kbpd / NULLIF(n.national_kbpd, 0), 2
-           ) AS share_of_us_ptc
+           ) AS share_of_us_pct
 	FROM fact_production_monthly AS f
 		INNER JOIN dim_geography AS g 
 			ON f.series_id = g.series_id
@@ -79,7 +79,7 @@ FROM fact_production_monthly AS f
     SELECT f.month, f.production_kbpd,
 		   g.padd, g.area_name,
            ROUND(100.0 * f.production_kbpd / NULLIF(n.national_kbpd, 0), 2)
-			AS share_of_us_ptc
+			AS share_of_us_pct
 FROM fact_production_monthly AS f
 	INNER JOIN dim_geography AS g
 		ON f.series_id = g.series_id
