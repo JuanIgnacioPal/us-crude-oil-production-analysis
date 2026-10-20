@@ -6,7 +6,7 @@
 > production using public data from the U.S. Energy Information
 > Administration (EIA).
 
-**Status:** 🚧 In progress — Phase 3: SQL loading and validation 
+**Status:** 🚧 In progress — Phase 4: KPI definition and validation
 
 **Industry:** 🛢️ Oil & Gas · Crude oil production  
 **Coverage:** 🌎 United States  
@@ -199,6 +199,7 @@ us-crude-oil-production-analysis/
 │   ├── sql_exploratory_findings.md
 │   ├── sql_quality_reconciliation.md
 │   ├── sql_import_validation.md
+│   ├── kpi_catalog.md
 │   └── README.md
 ├── sources/
 │   └── sources.md
