@@ -11,7 +11,6 @@
 **Industry:** 🛢️ Oil & Gas · Crude oil production  
 **Coverage:** 🌎 United States  
 **Frequency:** 📅 Monthly  
-**Tools:** Excel · Power Query · MySQL · SQL · Power BI · DAX · GitHub
 
 ---
 
