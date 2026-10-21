@@ -161,4 +161,4 @@ SELECT month,
        change_kbpd,
        ROUND(contribution_pp, 6) AS contribution_pp
 FROM contribution_rows
-ORDER BY row_type, contribution_pp DESC, area_name;
+	ORDER BY row_type, contribution_pp DESC, area_name;
