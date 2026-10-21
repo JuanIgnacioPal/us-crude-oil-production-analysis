@@ -59,7 +59,7 @@ FROM fact_production_monthly AS f
 		   ROUND(c.average_kbpd, 3) AS ytd_average_kbpd,
            ROUND(c.average_kbpd - p.average_kbpd, 3) AS ytd_change_kbpd,
            ROUND(100.0 * (c.average_kbpd - p.average_kbpd) 
-				/ NULLIF(p.average_kbpd, 0), 2) AS ytd_change_ptc
+				/ NULLIF(p.average_kbpd, 0), 2) AS ytd_change_pct
 FROM ytd_rates AS c
 	LEFT JOIN ytd_rates AS p
 		ON p.production_year = c.production_year - 1
