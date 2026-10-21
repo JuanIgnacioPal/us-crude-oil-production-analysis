@@ -199,6 +199,7 @@ us-crude-oil-production-analysis/
 │   ├── sql_quality_reconciliation.md
 │   ├── sql_import_validation.md
 │   ├── kpi_catalog.md
+│   ├── sql_kpi_validation.md
 │   └── README.md
 ├── sources/
 │   └── sources.md
@@ -207,6 +208,7 @@ us-crude-oil-production-analysis/
     ├── 02_validated_import.sql
     ├── 03_data_quality_reconciliation.sql
     ├── 04_exploratory_analysis.sql
+    ├── 05_kpi_validation.sql
     └── README.md
 ```
 
