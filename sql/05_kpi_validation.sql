@@ -80,6 +80,8 @@ ranked_components AS (
 FROM fact_production_monthly AS f
 	INNER JOIN dim_geography AS g 
 		ON f.series_id = g.series_id
+	INNER JOIN latest_period AS l
+    	ON f.month = l.latest_month
 			WHERE g.is_component = 1),
 
 top_five AS (
