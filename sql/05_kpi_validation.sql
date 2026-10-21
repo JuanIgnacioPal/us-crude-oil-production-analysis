@@ -25,7 +25,7 @@ SELECT production_year,
        months_covered,
        days_covered,
        ROUND(average_kbpd, 3) AS average_kbpd,
-       ROUND(average_kbpd - previous_year_kbpd, 3) AS annual_change_kbpd,
+       ROUND(average_kbpd - previous_year_kbpd, 3) AS annual_growth_kbpd,
        ROUND(100.0 * (average_kbpd - previous_year_kbpd)
              / NULLIF(previous_year_kbpd, 0), 2) AS annual_growth_pct
 FROM annual_comparison
@@ -57,9 +57,9 @@ FROM fact_production_monthly AS f
 
 	SELECT c.production_year, c.cutoff_month, c.months_covered, c.days_covered,
 		   ROUND(c.average_kbpd, 3) AS ytd_average_kbpd,
-           ROUND(c.average_kbpd - p.average_kbpd, 3) AS ytd_change_kbpd,
+           ROUND(c.average_kbpd - p.average_kbpd, 3) AS ytd_growth_kbpd,
            ROUND(100.0 * (c.average_kbpd - p.average_kbpd) 
-				/ NULLIF(p.average_kbpd, 0), 2) AS ytd_change_pct
+				/ NULLIF(p.average_kbpd, 0), 2) AS ytd_growth_pct
 FROM ytd_rates AS c
 	LEFT JOIN ytd_rates AS p
 		ON p.production_year = c.production_year - 1
@@ -120,11 +120,11 @@ national_comparison AS (
        AND p.month = DATE_SUB(c.month, INTERVAL 1 YEAR)   
     WHERE c.series_id = 'MCRFPUS2'
 ),
-component_changes AS (
+component_growths AS (
     SELECT c.month,
            g.series_id,
            g.area_name,
-           c.production_kbpd - p.production_kbpd AS change_kbpd,
+           c.production_kbpd - p.production_kbpd AS growth_kbpd,
            n.previous_us_kbpd                              
     FROM fact_production_monthly AS c
     INNER JOIN dim_geography AS g
@@ -140,27 +140,27 @@ contribution_rows AS (
     SELECT month,
            'Component' AS row_type,
            area_name,
-           change_kbpd,
-           100.0 * change_kbpd / NULLIF(previous_us_kbpd, 0) AS contribution_pp
-    FROM component_changes
+           growth_kbpd,
+           100.0 * growth_kbpd / NULLIF(previous_us_kbpd, 0) AS contribution_pp
+    FROM component_growths
 
     UNION ALL
 
     SELECT n.month,
            'Residual',
            'Geographic reconciliation residual',
-           n.current_us_kbpd - n.previous_us_kbpd - SUM(c.change_kbpd),
-           100.0 * (n.current_us_kbpd - n.previous_us_kbpd - SUM(c.change_kbpd))
+           n.current_us_kbpd - n.previous_us_kbpd - SUM(c.growth_kbpd),
+           100.0 * (n.current_us_kbpd - n.previous_us_kbpd - SUM(c.growth_kbpd))
                / NULLIF(n.previous_us_kbpd, 0)            
     FROM national_comparison AS n
-    INNER JOIN component_changes AS c
+    INNER JOIN component_growths AS c
         ON n.month = c.month
     GROUP BY n.month, n.current_us_kbpd, n.previous_us_kbpd
 )
 SELECT month,
        row_type,
        area_name,                                      
-       change_kbpd,
+       growth_kbpd,
        ROUND(contribution_pp, 6) AS contribution_pp
 FROM contribution_rows
 	ORDER BY row_type, contribution_pp DESC, area_name;
