@@ -97,12 +97,3 @@ Period average production
   to two decimals.
 - Display weighted average production to three decimals.
 - Calculate totals from unrounded values.
-
-## 📌 Interpretation
-
-These indicators describe production patterns and geographic
-concentration. They do not measure profitability, reserves,
-well productivity, or the causes of production changes.
-
-Shares and contributions retain the reconciliation differences
-documented in Block B.
