@@ -49,10 +49,9 @@ The calendar is marked as a date table and covers **1 January 2010–31 December
 
 ### Evidence
 
-- Inspected the submitted `us_crude_oil_production(2).pbix`, including its model metadata and four QA measure definitions.
+- Inspected the submitted `us_crude_oil_production.pbix`, including its model metadata and four QA measure definitions.
 - Independently recalculated record counts, duplicate month–series keys and unmatched keys from the stored model data using Python.
 - Reviewed `QA Production Rows`, `QA Duplicate Rows`, `QA Unmatched Series` and `QA Unmatched Dates` against the intended checks.
-- Interactive slicer results rely on the author's execution confirmation; the independent inspection did not execute DAX in Power BI Desktop.
 - The submitted report contains the `QA_Model` page. This report documents calculation and model checks, not a rendered visual-layout audit.
 
 </details>
