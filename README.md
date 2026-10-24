@@ -6,8 +6,7 @@
 > production using public data from the U.S. Energy Information
 > Administration (EIA).
 
-**Status:** 🚧 In progress — Phase 4: KPI definition and validation
-
+**Status:** 🚧 In progress — Phase 5: Power BI data modeling.
 **Industry:** 🛢️ Oil & Gas · Crude oil production  
 **Coverage:** 🌎 United States  
 **Frequency:** 📅 Monthly  
@@ -153,12 +152,42 @@ Phase 7 will consolidate the supporting evidence.
 
 ---
 
+## 🧪 Data Model Validation
+
+Date and geography dimensions connect to the monthly production
+fact table through two active one-to-many relationships,
+with single-direction filtering.
+
+| Check | Result |
+|---|---:|
+| Production records | 8,358 |
+| Duplicate month–series records | 0 |
+| Unmatched geographic keys | 0 |
+| Unmatched dates | 0 |
+| Month and geography filtering tests | 4 of 4 passed |
+
+![Unfiltered model-validation page](images/qa_model.png)
+
+<details>
+<summary>View model relationships</summary>
+
+![Data model relationships](images/model_relationships.png)
+
+</details>
+
+📁 [Download Power BI file](powerbi/us_crude_oil_production.pbix)
+
+> These checks validate model structure and filtering.
+> Production and growth measures will be validated separately
+> against the SQL reference results.
+
+---
 ## 📦 Planned Deliverables
 
 - [x] Original and prepared datasets.
 - [x] Data dictionary and transformation log.
 - [x] SQL analysis and validation scripts.
-- [ ] KPI catalog and calculation rules.
+- [x] KPI catalog and calculation rules.
 - [ ] Power BI data model and dashboard.
 - [ ] Data quality audit.
 - [ ] Findings, conclusions, and limitations.
@@ -192,6 +221,9 @@ us-crude-oil-production-analysis/
 │       ├── geography_lookup.csv
 │       ├── production_monthly.csv
 │       └── README.md
+├── images/
+│   ├── qa_model.png
+│   └── model_relationships.png
 ├── docs/
 │   ├── data_dictionary.md
 │   ├── data_preparation.md
@@ -201,6 +233,8 @@ us-crude-oil-production-analysis/
 │   ├── kpi_catalog.md
 │   ├── sql_kpi_validation.md
 │   └── README.md
+├── powerbi/
+│   ├── us_crude_oil_production.pbix
 ├── sources/
 │   └── sources.md
 └── sql/
