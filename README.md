@@ -188,6 +188,8 @@ with single-direction filtering.
 - [x] Data dictionary and transformation log.
 - [x] SQL analysis and validation scripts.
 - [x] KPI catalog and calculation rules.
+- [x] Power BI data model and filtering validation.
+- [ ] Production measures and analytical dashboard.
 - [ ] Power BI data model and dashboard.
 - [ ] Data quality audit.
 - [ ] Findings, conclusions, and limitations.
