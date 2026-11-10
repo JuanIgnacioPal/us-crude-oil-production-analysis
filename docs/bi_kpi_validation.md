@@ -71,5 +71,3 @@ The SQL report retains its separate status: **reference values; execution confir
 - [SQL references](sql_kpi_validation.md)
 - [SQL validation script](../sql/05_kpi_validation.sql)
 - [Power BI file](../powerbi/us_crude_oil_production.pbix)
-- [Versión en español](powerbi_kpi_validation_ES.md)
-
