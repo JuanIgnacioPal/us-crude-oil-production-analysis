@@ -6,7 +6,7 @@
 > production using public data from the U.S. Energy Information
 > Administration (EIA).
 
-**Status:** 🚧 In progress — Phase 5: Power BI data modeling.
+**Status:** 🚧 In progress — In progress — Phase 6: DAX validation.
 **Industry:** 🛢️ Oil & Gas · Crude oil production  
 **Coverage:** 🌎 United States  
 **Frequency:** 📅 Monthly  
@@ -189,7 +189,7 @@ with single-direction filtering.
 - [x] SQL analysis and validation scripts.
 - [x] KPI catalog and calculation rules.
 - [x] Power BI data model and filtering validation.
-- [ ] Production measures and analytical dashboard.
+- [x] Production measures and analytical dashboard.
 - [ ] Power BI data model and dashboard.
 - [ ] Data quality audit.
 - [ ] Findings, conclusions, and limitations.
