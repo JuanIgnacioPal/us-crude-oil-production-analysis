@@ -6,7 +6,7 @@
 > production using public data from the U.S. Energy Information
 > Administration (EIA).
 
-**Status:** 🚧 In progress — Phase 6: DAX validation.
+**Status:** 🚧 In progress — In progress — Phase 6: DAX validation checkpoints completed; analytical dashboards in progress.
 **Industry:** 🛢️ Oil & Gas · Crude oil production  
 **Coverage:** 🌎 United States  
 **Frequency:** 📅 Monthly  
