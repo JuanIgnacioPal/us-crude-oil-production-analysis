@@ -8,6 +8,8 @@ transformation rules, indicators, quality checks, and conclusions.
 - [Source](https://github.com/JuanIgnacioPal/us-crude-oil-production-analysis/blob/main/sources/sources.md)
 - [Data Dictionary](data_dictionary.md)
 - [Data Preparation and Validation](data_preparation.md)
+- [Power BI Model Validation](bi_model_validation.md)
+- [Power BI KPI Validation](bi_kpi_validation.md)
 
 Additional documents will be added as their project phases
 are completed.
