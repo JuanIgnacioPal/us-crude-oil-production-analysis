@@ -178,8 +178,9 @@ with single-direction filtering.
 📁 [Download Power BI file](powerbi/us_crude_oil_production.pbix)
 
 > These checks validate model structure and filtering.
-> Production and growth measures will be validated separately
-> against the SQL reference results.
+> Reviewed DAX validation cases are documented in
+> [Power BI KPI Validation](docs/bi_kpi_validation.md).
+> SQL execution confirmation remains tracked separately.
 
 ---
 ## 📦 Planned Deliverables
